@@ -1,0 +1,19 @@
+.Label {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-indent: 5px;
+}
+
+.Select {
+  padding: 12px 12px;
+
+  background-color: #f3f3f6;
+  border-radius: 7px;
+  border: none;
+
+  color: #13135a;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  transition: all 0.2s ease;
+}

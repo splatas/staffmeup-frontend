@@ -1,0 +1,10 @@
+.subtitle {
+  display: inline-block;
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.subtitle > * {
+  margin-left: 20px;
+}

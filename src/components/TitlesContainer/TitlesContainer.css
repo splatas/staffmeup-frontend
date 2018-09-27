@@ -1,0 +1,12 @@
+.titlesContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 30px;
+}
+
+.titlesContainer > * {
+  margin-right: 20px;
+}

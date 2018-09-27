@@ -1,0 +1,62 @@
+[
+  {
+    "idTicket": "abc123",
+    "id": 1,
+    "name": "Lucas Romero",
+    "history": [
+      {
+        "timestamp": "09-17-2018",
+        "name": "Lucas Romero"
+      },
+      {
+        "timestamp": "09-02-2018",
+        "name": "Lucas R"
+      }
+    ]
+  },
+  {
+    "idTicket": "abc123",
+    "id": 2,
+    "name": "Nicolás Córdoba",
+    "history": [
+      {
+        "timestamp": "09-17-2018",
+        "name": "Nicolás Córdoba"
+      },
+      {
+        "timestamp": "09-02-2018",
+        "name": "Nicolás C"
+      }
+    ]
+  },
+  {
+    "idTicket": "xyz789",
+    "id": 3,
+    "name": "Adriano Mancini",
+    "history": [
+      {
+        "timestamp": "09-17-2018",
+        "name": "Adriano Mancini"
+      },
+      {
+        "timestamp": "09-02-2018",
+        "name": "Adriano M"
+      }
+    ]
+  },
+  {
+    "idTicket": "xyz789",
+    "id": 4,
+    "name": "Fulano De Tal",
+    "history": [
+      {
+        "timestamp": "09-17-2018",
+        "name": "Fulano De Tal"
+      },
+      {
+        "timestamp": "09-02-2018",
+        "name": "Fulano"
+      }
+    ]
+  }
+]

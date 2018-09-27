@@ -1,0 +1,47 @@
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 2px dashed rgba(19, 19, 90, 0.05);
+  margin-bottom: 20px;
+}
+
+header h1 {
+  display: inline-block;
+
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 3.4em;
+  letter-spacing: -4px;
+}
+
+header *:not(:first-child) {
+  margin-left: 40px;
+  opacity: 0;
+  transform: translateX(-10px);
+  animation: fadeItems 0.3s ease 0.6s forwards;
+}
+
+.logo {
+  width: 300px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeHeader 0.8s ease 0.1s forwards;
+}
+
+@keyframes fadeHeader {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeItems {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

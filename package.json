@@ -1,0 +1,44 @@
+{
+  "name": "staffing-follower-pod3-frontend",
+  "version": "0.1.0",
+  "description": "staffing tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --progress --colors --config ./webpack.config.js --mode development",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.corp.globant.com/lucas-romero/staffing-follower-pod3-frontend.git"
+  },
+  "homepage": "https://github.corp.globant.com/pages/lucas-romero/staffing-follower-pod3-frontend/",
+  "author": "Postres (POD#3)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "chart.js": "^2.7.2",
+    "css-loader": "^1.0.0",
+    "gh-pages": "^2.0.0",
+    "react-chartjs-2": "^2.7.4",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.19.0",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8"
+  },
+  "dependencies": {
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1"
+  }
+}

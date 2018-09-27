@@ -1,0 +1,20 @@
+.row {
+  height: 60px;
+  border-radius: 5px;
+}
+
+.rowSolid {
+  background-color: rgba(19, 19, 90, 0.05);
+  transition: box-shadow 0.2s ease;
+}
+
+.rowOutline {
+  background-color: #fff;
+  box-shadow: 0 0 0 2px rgba(19, 19, 90, 0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.rowSolid:hover,
+.rowOutline:hover {
+  box-shadow: 0 0 0 2px rgba(19, 19, 90, 0.3);
+}

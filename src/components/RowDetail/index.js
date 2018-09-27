@@ -1,0 +1,1 @@
+export { RowDetail } from "./RowDetail";

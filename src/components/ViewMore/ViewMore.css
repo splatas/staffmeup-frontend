@@ -1,0 +1,29 @@
+.viewMore {
+  position: relative;
+  top: -2px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  background-color: #ff9900;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 700;
+  font-size: 0.8em;
+  cursor: help;
+}
+
+.viewMore:hover {
+  animation: growViewMore 0.2s ease forwards;
+}
+
+@keyframes growViewMore {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.3);
+  }
+}

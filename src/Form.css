@@ -1,0 +1,16 @@
+.Form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: row;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.FormControl {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-right: 10px;
+}

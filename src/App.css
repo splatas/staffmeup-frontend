@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+::selection {
+  background-color: #13135a;
+  color: #51e598;
+}
+
+body {
+  margin: 20px;
+  margin-bottom: 50px;
+  color: #13135a;
+}
+
+body .titlesContainer:first-child {
+  padding-bottom: 20px;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #51e598;
+  text-decoration: none;
+}
+
+/* GENERIC TABLE */
+
+table {
+  width: 100%;
+  border-spacing: 0 8px;
+  padding-bottom: 30px;
+}
+
+td {
+  padding: 10px 15px;
+}
+
+td:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+td:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+/* PROGRESS CANDIDATE */
+
+table.ProgressCandidate tr td:nth-child(1) {
+  width: 18%;
+}
+
+table.ProgressCandidate tr td:nth-child(2) {
+  width: 15%;
+}
+
+.ProgressCandidateHead {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ProgressCandidateHead span {
+  width: 25%;
+}
+
+.ProgressCandidateHead span:nth-child(3) {
+  text-align: center;
+}
+
+.ProgressCandidateHead span:nth-child(4) {
+  text-align: right;
+}
+
+table.ProgressCandidate tr td:nth-child(2) {
+  width: 120px;
+}
+
+table.ProgressCandidate tr td:nth-child(3) {
+  width: 50px;
+  text-align: center;
+}
+
+table.ProgressCandidate tr td:nth-child(3) {
+  width: 150px;
+  text-align: left;
+}
+
+table.ProgressCandidate.Compare tr td:nth-child(2) {
+  width: 150px;
+}
+
+table.ProgressCandidate.Compare tr td:nth-child(4) {
+  width: 50px;
+  text-align: center;
+}
+
+/* TICKET PREVIEW */
+
+table.TicketPreview tr td:last-child {
+  width: 170px;
+}
+
+/* ROW PILL */
+
+table.TicketPreview tbody tr td:first-child {
+  width: 100px;
+  background-color: #13135a;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+table.ProgressCandidate tbody tr td:first-child {
+  background-color: #13135a;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+table.TicketPreview tbody tr td:first-child > *,
+table.ProgressCandidate tbody tr td:first-child > * {
+  color: #fff;
+  text-decoration: none;
+}
+
+table.TicketPreview tbody tr td:first-child > *:hover,
+table.ProgressCandidate tbody tr td:first-child > *:hover {
+  color: #51e598;
+  text-decoration: none;
+}
+
+table.TicketPreview tbody tr td:first-child > *::after,
+table.ProgressCandidate tbody tr td:first-child > *::after {
+  content: "»";
+  margin-left: 5px;
+  text-decoration: none;
+}
+
+table.hasAging tr td.agingSuccess {
+  color: #51e598;
+  font-weight: 700;
+}
+
+table.hasAging tr td.agingWarning {
+  color: #e55167;
+  font-weight: 700;
+}
+
+table.History tr td:first-child {
+  width: 170px;
+  font-weight: 700;
+}
+
+section {
+  transform: translateY(10px);
+  opacity: 0;
+  animation: fadeRow 0.3s 0.1s ease forwards;
+}
+
+@keyframes fadeRow {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

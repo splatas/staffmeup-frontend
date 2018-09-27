@@ -1,0 +1,30 @@
+[
+  {
+    "id": "abc123",
+    "project": "JPMC",
+    "history": [
+      {
+        "timestamp": "09-17-2018",
+        "project": "JPMC"
+      },
+      {
+        "timestamp": "09-17-2018",
+        "project": ""
+      }
+    ]
+  },
+  {
+    "id": "xyz789",
+    "project": "GIT",
+    "history": [
+      {
+        "timestamp": "09-17-2018",
+        "project": "GIT"
+      },
+      {
+        "timestamp": "09-17-2018",
+        "project": "G"
+      }
+    ]
+  }
+]
