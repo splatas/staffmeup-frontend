@@ -17,7 +17,7 @@ export const Stats = () => {
 
       <TitlesContainer>
         <Subtitle>Tickets By Status</Subtitle>
-        <ActivateExport route="/tickethistory/downloadTechnologyReport" />
+        <ActivateExport route="/ticket/downloadticketreport" />
       </TitlesContainer>
       <StatsTickets />
 
