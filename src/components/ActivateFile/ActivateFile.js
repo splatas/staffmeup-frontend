@@ -16,7 +16,6 @@ export class ActivateFileComponent extends Component {
   }
 
   activateFile() {
-    console.log("lalalal");
     fetch(`${fetchURL}/import/sheetTicketCandidate`).then(res =>
       console.log("Load file status ->", res.status)
     );
