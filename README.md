@@ -47,6 +47,10 @@ Siga las siguientes instrucciones para montar el proyecto de frontend en un serv
 - Correr el proyecto en el navegador: `npm start`
 - Abrir navegador en el puerto [localhost:8080](http://localhost:8080)
 
+### Servidor backend
+
+El servidor backend se levanta en la IP y puerto especificado en el archivo `src/fetchURL.js`
+
 ## Entorno de producción
 
 - Abrir una terminal en la raiz del proyecto
