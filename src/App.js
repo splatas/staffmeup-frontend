@@ -21,8 +21,10 @@ export const App = () => {
   return (
     <section className="wrapper">
       <Header title="StaffMeUp" path="/">
-        <ActivateFile />
-        <ActivateReports />
+        <div>
+          <ActivateFile />
+          <ActivateReports />
+        </div>
       </Header>
       <Switch>
         <Route exact path="/" component={TicketsList} />

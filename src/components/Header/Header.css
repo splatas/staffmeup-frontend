@@ -1,6 +1,6 @@
 header {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -8,18 +8,14 @@ header {
   margin-bottom: 20px;
 }
 
-header h1 {
-  display: inline-block;
-
-  margin: 0;
-
-  font-weight: 700;
-  font-size: 3.4em;
-  letter-spacing: -4px;
+header div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-header *:not(:first-child) {
-  margin-left: 40px;
+header > div *:not(:first-child) {
+  margin-left: 15px;
   opacity: 0;
   transform: translateX(-10px);
   animation: fadeItems 0.3s ease 0.6s forwards;
@@ -30,6 +26,7 @@ header *:not(:first-child) {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeHeader 0.8s ease 0.1s forwards;
+  margin-right: 30px;
 }
 
 @keyframes fadeHeader {

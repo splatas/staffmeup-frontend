@@ -27,6 +27,11 @@ body .titlesContainer:first-child {
   margin-right: auto;
 }
 
+path {
+  fill: #13135a;
+  transition: fill 0.2s ease;
+}
+
 a {
   color: #51e598;
   text-decoration: none;
