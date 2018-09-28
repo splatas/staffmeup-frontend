@@ -32,9 +32,14 @@ class TicketComponent extends Component {
     const ticket = tickets.find(
       ticket => Number(ticket.idTicket) === Number(match.params.idTicket)
     );
+
+    console.log("All candidates -->", candidates);
+
     const candidate = candidates.filter(
       candidate => Number(candidate.ticket) === Number(match.params.idTicket)
     );
+
+    console.log("Ticket candidates -->", candidate);
 
     return (
       <section>
@@ -168,7 +173,7 @@ class TicketComponent extends Component {
                         interview: candidate.interview,
                         onboarding: candidate.onboarding,
                         real: candidate.realAttribute,
-                        closed: candidate.candidateStatus
+                        status: candidate.candidateStatus
                       }}
                     />
                   </td>

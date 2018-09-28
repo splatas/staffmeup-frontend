@@ -4,9 +4,6 @@ import { ProgressDot } from "./ProgressDot";
 import { ProgressLine } from "./ProgressLine";
 import "./ProgressCandidate.css";
 
-// TODO: temporal variables
-// const parseString = str => str.toLocaleLowerCase().replace(/ /g, "");
-
 export class ProgressCandidate extends Component {
   constructor(props) {
     super(props);
@@ -14,7 +11,9 @@ export class ProgressCandidate extends Component {
       interview: this.parseString(this.props.data.interview) === "yes",
       onboarding: this.parseString(this.props.data.onboarding) === "yes",
       real: this.parseString(this.props.data.real) === "yes",
-      closed: this.parseString(this.props.data.closed) === "closed"
+      status:
+        this.parseString(this.props.data.status) === "closed" ||
+        this.parseString(this.props.data.status) === "confirmed"
     };
   }
 
@@ -30,11 +29,11 @@ export class ProgressCandidate extends Component {
   }
 
   render() {
-    const { interview, onboarding, real, closed } = this.state;
+    const { interview, onboarding, real, status } = this.state;
 
     const firstStep = interview && onboarding;
     const secondStep = firstStep && real;
-    const thirdStep = secondStep && closed;
+    const thirdStep = secondStep && status;
 
     return (
       <div className="progress">
@@ -49,7 +48,7 @@ export class ProgressCandidate extends Component {
         </div>
         <div className="box">
           <ProgressLine active={thirdStep} />
-          <ProgressDot active={closed && thirdStep} />
+          <ProgressDot active={status && thirdStep} />
         </div>
       </div>
     );

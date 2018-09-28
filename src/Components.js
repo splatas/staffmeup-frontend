@@ -252,7 +252,7 @@ export const Components = () => {
                   interview: "yes",
                   onboarding: "yes",
                   real: "yes",
-                  closed: "no"
+                  status: "no"
                 }}
               />
             </td>
@@ -269,7 +269,7 @@ export const Components = () => {
                   interview: "yes",
                   onboarding: "yes",
                   real: "yes",
-                  closed: "closed"
+                  status: "closed"
                 }}
               />
             </td>
@@ -286,7 +286,7 @@ export const Components = () => {
                   interview: "yes",
                   onboarding: "yes",
                   real: "no",
-                  closed: "no"
+                  status: "no"
                 }}
               />
             </td>
@@ -414,12 +414,12 @@ export const Components = () => {
       <TitlesContainer>
         <Subtitle>Tech Stats</Subtitle>
       </TitlesContainer>
-      <StatsTech/>
+      <StatsTech />
 
       <TitlesContainer>
         <Subtitle>Tickets Stats</Subtitle>
       </TitlesContainer>
-      <StatsTickets/>
+      <StatsTickets />
     </section>
   );
 };

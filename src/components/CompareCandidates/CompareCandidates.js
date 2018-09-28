@@ -181,7 +181,7 @@ export class CompareCandidatesComponent extends Component {
                           interview: candidate[0].interview,
                           onboarding: candidate[0].onboarding,
                           real: candidate[0].realAttribute,
-                          closed: candidate[0].candidateStatus
+                          status: candidate[0].candidateStatus
                         }}
                       />
                     </td>
@@ -229,7 +229,7 @@ export class CompareCandidatesComponent extends Component {
                           interview: candidate[1].interview,
                           onboarding: candidate[1].onboarding,
                           real: candidate[1].realAttribute,
-                          closed: candidate[1].candidateStatus
+                          status: candidate[1].candidateStatus
                         }}
                       />
                     </td>
