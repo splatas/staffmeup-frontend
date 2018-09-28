@@ -25,7 +25,7 @@ export class CandidateHistoryComponent extends Component {
 
   componentWillMount() {
     this.props.fetchOnlyTickets();
-    this.props.fetchOnlyCandidates();
+    // this.props.fetchOnlyCandidates();
     this.props.fetchCandidatesHistory();
   }
 
@@ -36,9 +36,10 @@ export class CandidateHistoryComponent extends Component {
   }
 
   candidate() {
-    return this.props.candidates
+    return this.props.candidatesHistory
       .filter(
-        candidate => Number(candidate.ticket) === Number(this.props.data.id)
+        candidate =>
+          Number(candidate.idCandidate) === Number(this.props.data.candidate)
       )
       .find(
         candidate =>
@@ -54,10 +55,10 @@ export class CandidateHistoryComponent extends Component {
   }
 
   render() {
-    const ifCandidates = this.props.candidates.length > 0;
+    const ifCandidates = this.props.candidatesHistory.length > 0;
 
+    console.log("cnadidate ->", this.candidate());
     console.log(this.history());
-    console.log(this.history().map(candidate => candidate.realAttibute));
 
     return (
       <section>
@@ -88,8 +89,8 @@ export class CandidateHistoryComponent extends Component {
           </thead>
           <tbody>
             {ifCandidates && (
-              <Row className="row rowSolid" key={this.candidate().idCandidate}>
-                <td>{this.candidate().name}</td>
+              <Row className="row rowSolid" key={this.candidate().ticket}>
+                <td>{this.candidate().nombre}</td>
                 <td>{this.candidate().candidateStatus}</td>
                 <td>{this.candidate().level}</td>
                 <td>
@@ -169,13 +170,13 @@ export class CandidateHistoryComponent extends Component {
 
 const mapStateToProps = state => ({
   tickets: state.onlyTickets.data,
-  candidates: state.onlyCandidates.data,
+  // candidates: state.onlyCandidates.data,
   candidatesHistory: state.candidatesHistory.data
 });
 
 const mapDispatchToProps = dispatch => ({
   fetchOnlyTickets: () => dispatch(fetchOnlyTickets()),
-  fetchOnlyCandidates: () => dispatch(fetchOnlyCandidates()),
+  // fetchOnlyCandidates: () => dispatch(fetchOnlyCandidates()),
   fetchCandidatesHistory: () => dispatch(fetchCandidatesHistory())
 });
 
