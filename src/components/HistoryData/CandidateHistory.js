@@ -98,7 +98,7 @@ export class CandidateHistoryComponent extends Component {
                       interview: this.candidate().interview,
                       onboarding: this.candidate().onboarding,
                       real: this.candidate().realAttibute,
-                      closed: this.candidate().candidateStatus
+                      status: this.candidate().candidateStatus
                     }}
                   />
                 </td>
