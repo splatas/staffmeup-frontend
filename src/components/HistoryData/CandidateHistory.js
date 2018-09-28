@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import { fetchOnlyTickets } from "../../state/actions/onlyTickets";
-import { fetchOnlyCandidates } from "../../state/actions/onlyCandidates";
 import { fetchCandidatesHistory } from "../../state/actions/candidatesHistory";
 
 import { Aging } from "../../utilities/Aging";
@@ -25,7 +24,6 @@ export class CandidateHistoryComponent extends Component {
 
   componentWillMount() {
     this.props.fetchOnlyTickets();
-    // this.props.fetchOnlyCandidates();
     this.props.fetchCandidatesHistory();
   }
 
@@ -170,13 +168,11 @@ export class CandidateHistoryComponent extends Component {
 
 const mapStateToProps = state => ({
   tickets: state.onlyTickets.data,
-  // candidates: state.onlyCandidates.data,
   candidatesHistory: state.candidatesHistory.data
 });
 
 const mapDispatchToProps = dispatch => ({
   fetchOnlyTickets: () => dispatch(fetchOnlyTickets()),
-  // fetchOnlyCandidates: () => dispatch(fetchOnlyCandidates()),
   fetchCandidatesHistory: () => dispatch(fetchCandidatesHistory())
 });
 
