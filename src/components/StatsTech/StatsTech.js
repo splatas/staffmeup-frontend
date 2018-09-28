@@ -29,10 +29,15 @@ export class StatsTech extends Component {
 
     for (let stat of data) {
       labels = [...labels, stat.tecnologyName];
-      maxArray = [...maxArray, stat.max];
-      minArray = [...minArray, stat.min];
-      avgArray = [...avgArray, stat.avarage == "NaN" ? 0 : stat.avarage];
+      maxArray = [...maxArray, stat.max.toFixed(2)];
+      minArray = [...minArray, stat.min.toFixed(2)];
+      avgArray = [
+        ...avgArray,
+        stat.avarage == "NaN" ? 0 : stat.avarage.toFixed(2)
+      ];
     }
+
+    console.log(minArray, avgArray, maxArray);
 
     const chartData = {
       labels,
@@ -74,8 +79,8 @@ export class StatsTech extends Component {
               display: false
             },
             scales: {
-              xAxes: [{ stacked: true }],
-              yAxes: [{ stacked: true }]
+              xAxes: [{ stacked: false }],
+              yAxes: [{ stacked: false }]
             }
           }}
         />
