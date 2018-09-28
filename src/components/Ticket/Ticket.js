@@ -33,13 +33,14 @@ class TicketComponent extends Component {
       ticket => Number(ticket.idTicket) === Number(match.params.idTicket)
     );
 
-    console.log("All candidates -->", candidates);
-
     const candidate = candidates.filter(
       candidate => Number(candidate.ticket) === Number(match.params.idTicket)
     );
 
-    console.log("Ticket candidates -->", candidate);
+    console.log(
+      "candidates",
+      candidate.map(candidate => candidate.candidateStatus)
+    );
 
     return (
       <section>

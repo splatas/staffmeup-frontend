@@ -14,7 +14,7 @@ header div {
   align-items: center;
 }
 
-header > div *:not(:first-child) {
+header > div > * {
   margin-left: 15px;
   opacity: 0;
   transform: translateX(-10px);

@@ -20,7 +20,8 @@
   text-transform: uppercase;
 }
 
-.btn:hover {
+.btn:hover,
+.btn.btnSelected {
   background-color: #13135a;
   box-shadow: inset 0 0 0 2px #13135a;
   color: #51e598;

@@ -3,13 +3,23 @@ import { connect } from "react-redux";
 
 import { filteredTickets } from "../../state/actions/filterTickets";
 import { Select } from "../Select";
+import { Button } from "../Button";
+
+import "./FilterTickets.css";
 
 export class FilterTickets extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.handleSubmit = this.handleSubmit.bind(this);
-  //   this.filterSearch = this.filterSearch.bind(this);
-  // }
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      all: true,
+      open: false,
+      closed: false
+    };
+
+    this.handleClick = this.handleClick.bind(this);
+    // this.filterSearch = this.filterSearch.bind(this);
+  }
 
   // filterSearch() {
   //   const { project, profile, seniority } = this.props.filterTickets;
@@ -23,24 +33,41 @@ export class FilterTickets extends Component {
   //   this.props.filtered(filtered);
   // }
 
-  // handleSubmit(e) {
-  //   e.preventDefault();
-  //   console.log("Submiting...");
-  //   this.filterSearch();
-  // }
+  handleClick(e) {
+    const name = e.target.name;
+    this.setState({
+      all: false,
+      open: false,
+      closed: false
+    });
+    this.setState(prevState => ({ [name]: !prevState[name] }));
+  }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <Select label="Project" name="project" defaultValue="Select any..." />
-        <Select label="Profile" name="profile" defaultValue="Select any..." />
-        <Select
-          label="Seniority"
-          name="seniority"
-          defaultValue="Select any..."
-        />
-        <button>Apply filter</button>
-      </form>
+      <div className="FilterTickets by">
+        <Button
+          name="all"
+          onClick={this.handleClick}
+          className={`btn ${this.state.all && `btnSelected`}`}
+        >
+          All
+        </Button>
+        <Button
+          name="open"
+          onClick={this.handleClick}
+          className={`btn ${this.state.open && `btnSelected`}`}
+        >
+          Not Closed
+        </Button>
+        <Button
+          name="closed"
+          onClick={this.handleClick}
+          className={`btn ${this.state.closed && `btnSelected`}`}
+        >
+          Only Closed
+        </Button>
+      </div>
     );
   }
 }

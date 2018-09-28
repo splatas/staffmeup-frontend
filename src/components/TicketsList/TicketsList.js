@@ -30,7 +30,6 @@ class TicketsListComponent extends Component {
               <Title>Tickets</Title>
             </TitlesContainer>
 
-            {/* <h4>Filter tickets</h4> */}
             {/* <FilterTickets /> */}
 
             <table className="TicketPreview hasAging">

@@ -1,0 +1,24 @@
+.FilterTickets {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 7px;
+  box-shadow: inset 0 0 0 2px #13135a;
+}
+
+.FilterTickets > .btn {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.FilterTickets > .btn:nth-child(2) {
+  left: -2px;
+}
+
+.FilterTickets > .btn:first-child {
+  border-radius: 7px 0 0 7px;
+}
+
+.FilterTickets > .btn:last-child {
+  border-radius: 0 7px 7px 0;
+}
