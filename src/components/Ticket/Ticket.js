@@ -37,7 +37,7 @@ class TicketComponent extends Component {
       candidate => Number(candidate.ticket) === Number(match.params.idTicket)
     );
 
-    console.log("candidates", candidate);
+    // console.log("candidates", candidate);
 
     return (
       <section>
