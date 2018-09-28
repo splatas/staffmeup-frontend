@@ -56,6 +56,9 @@ export class CandidateHistoryComponent extends Component {
   render() {
     const ifCandidates = this.props.candidates.length > 0;
 
+    console.log(this.history());
+    console.log(this.history().map(candidate => candidate.realAttibute));
+
     return (
       <section>
         <TitlesContainer>
@@ -94,7 +97,7 @@ export class CandidateHistoryComponent extends Component {
                     data={{
                       interview: this.candidate().interview,
                       onboarding: this.candidate().onboarding,
-                      real: this.candidate().realAttribute,
+                      real: this.candidate().realAttibute,
                       closed: this.candidate().candidateStatus
                     }}
                   />
@@ -150,7 +153,7 @@ export class CandidateHistoryComponent extends Component {
                     {Aging.calc(candidate.updateDate, this.ticket().startDate)}
                   </td>
 
-                  <td>{candidate.realAttribute}</td>
+                  <td>{candidate.realAttibute}</td>
                   <td>{candidate.candidateStatus}</td>
                   <td>{candidate.mainArea}</td>
                   <td>{candidate.project}</td>
