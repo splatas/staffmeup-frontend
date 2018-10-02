@@ -1,0 +1,2 @@
+Los diseños están realizados con Gravit Designer, un software en la nube de similares características que Sketch.
+Puedes editar estos archivos accediendo a https://designer.gravit.io/ e importando cualquiera de estos archivos.
