@@ -33,10 +33,10 @@ export class CompareCandidatesComponent extends Component {
 
   fetchBetween(from, to) {
     console.log(
-      `http://10.20.10.218:8081/tickethistory/getbetween/${from}/${to}`
+      `http://10.20.10.166:3306/tickethistory/getbetween/${from}/${to}`
     );
 
-    fetch(`http://10.20.10.218:8081/tickethistory/getbetween/${from}/${to}`)
+    fetch(`http://10.20.10.166:3306/tickethistory/getbetween/${from}/${to}`)
       .then(res => res.json())
       .then(data => {
         const filtered = Candidates.getHistoryByTicket(
