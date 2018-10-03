@@ -8,6 +8,8 @@ import { fetchCandidatesHistory } from "../../state/actions/candidatesHistory";
 import { Dates } from "../../utilities/Dates";
 import { Candidates } from "../../utilities/Candidates";
 
+import { fetchURL } from "../../fetchURL";
+
 export class CompareCandidatesComponent extends Component {
   constructor(props) {
     super(props);
@@ -32,11 +34,9 @@ export class CompareCandidatesComponent extends Component {
   }
 
   fetchBetween(from, to) {
-    console.log(
-      `http://10.20.10.166:3306/tickethistory/getbetween/${from}/${to}`
-    );
+    console.log(`${fetchURL}/tickethistory/getbetween/${from}/${to}`);
 
-    fetch(`http://10.20.10.166:3306/tickethistory/getbetween/${from}/${to}`)
+    fetch(`${fetchURL}/tickethistory/getbetween/${from}/${to}`)
       .then(res => res.json())
       .then(data => {
         const filtered = Candidates.getHistoryByTicket(
